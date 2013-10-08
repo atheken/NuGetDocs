@@ -63,14 +63,17 @@ In this scenario, NuGet will grab the exact version when restoring a package. It
 
 <p class="caution"><b>Be sure to check in your _repositories.config_ file.</b> Some version control systems, 
 such as Subversion (a.k.a. SVN), may require additional configuration to allow you to selectively ignore an arbitrary set of files in a path, _but_ include a specific file, such as your _repositories.config_ in that path.
-<br/>
+<br>
 For SVN specifically, you may use SVN:IGNORE to prevent paths with certain patterns from being committed (and making a mess in your pending changes views).
 By adding the following pattern as an SVN:IGNORE to your "packages" directory, the repositories.config will be committed, but nuget package directories will be ignored.
-<br/>
+<br>
+<br>
 *[0-9]*
-<br/>
+<br>
+<br>
 Similar ignore patterns are probably available for most source control systems.
-<br/>
+<br>
+<br>
 In rare cases, you'll need to agree with your team to include the folder from the root of your solution, explicitly include the _repositories.config_ file but _not_ check in any packages. Without 
 the file you may experience problems loading or building a multi-project solution with package restore enabled.
 </p>
